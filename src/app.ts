@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Router } from 'express';
 import path from 'path';
 
 /** 1- ENTRANCE **/
@@ -14,5 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 app.set('views', path.join(__dirname, "views"))
 app.set("view engine", "ejs")
 /** 4 - ROUTERS **/
+app.use("/", Router)
 
 export default app;
