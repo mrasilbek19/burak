@@ -1,14 +1,25 @@
+# Task N
+def palindromCheck(text):
+    text1 = text.lower()[::-1]
+    return text.lower() == text1
+
+
+result1 = palindromCheck("pyhon")
+result2 = palindromCheck("ddddddddddddd")
+print(result2)
+
+
 # TASK M
-def numberSquare(n):
-    return list(map(lambda num: {
-        "number": num,
-        "square": num ** 2
-    }, n))
+# def numberSquare(n):
+#     return list(map(lambda num: {
+#         "number": num,
+#         "square": num ** 2
+#     }, n))
 
 
-numbers = list(num for num in range(10))
+# numbers = list(num for num in range(10))
 
-print(numberSquare(numbers))
+# print(numberSquare(numbers))
 
 
 # def reverseSentence(str):
