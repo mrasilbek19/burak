@@ -1,12 +1,26 @@
+# task O
+def calculateSumOfNumbers(arr):
+    total = 0
+
+    for item in arr:
+        if type(item) == int or type(item) == float:
+            total += item
+
+    return total
+
+
+print(calculateSumOfNumbers([True, 25, 4.6, 28]))
+
+
 # Task N
-def palindromCheck(text):
-    text1 = text.lower()[::-1]
-    return text.lower() == text1
+# def palindromCheck(text):
+#     text1 = text.lower()[::-1]
+#     return text.lower() == text1
 
 
-result1 = palindromCheck("pyhon")
-result2 = palindromCheck("ddddddddddddd")
-print(result2)
+# result1 = palindromCheck("pyhon")
+# result2 = palindromCheck("ddddddddddddd")
+# print(result2)
 
 
 # TASK M

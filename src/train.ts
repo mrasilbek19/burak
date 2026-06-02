@@ -8,6 +8,20 @@
    - Error handling
  */
 
+// task O
+function calculateSumOfNumbers(arr: any[]): number {
+  let total = 0;
+
+  for (const item of arr) {
+    if (typeof item === "number") {
+      total += item;
+    }
+  }
+
+  return total;
+}
+
+console.log(calculateSumOfNumbers([1, "10", { son: 10 }, true, 60, 29]));
 
 
 
