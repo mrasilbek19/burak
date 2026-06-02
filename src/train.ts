@@ -1,13 +1,33 @@
+/*  Project Standards:
+  - Logging standards
+  - Naming standards:
+        function, method, variable => camelCase
+        class => PascalCase
+        folder => kebab-case
+        css => snake_case
+   - Error handling
+ */
+
+
+
+
+
+
+
+
+
+
+
 
 //Task N
-function findPalindrom(str: String): boolean {
-    const str1: string = str.toLowerCase().split('').reverse().join('');
-    return str == str1;
-}
-const result1: boolean = findPalindrom("typescript")
-const result2: boolean = findPalindrom("daaad")
-console.log(result1)
-console.log(result2)
+// function findPalindrom(str: String): boolean {
+//     const str1: string = str.toLowerCase().split('').reverse().join('');
+//     return str == str1;
+// }
+// const result1: boolean = findPalindrom("typescript")
+// const result2: boolean = findPalindrom("daaad")
+// console.log(result1)
+// console.log(result2)
 
 
 
