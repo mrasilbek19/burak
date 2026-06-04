@@ -8,20 +8,34 @@
    - Error handling
  */
 
-// task O
-function calculateSumOfNumbers(arr: any[]): number {
-  let total = 0;
-
-  for (const item of arr) {
-    if (typeof item === "number") {
-      total += item;
-    }
+//TASK P
+function objectToArray(obj: Record<string, any>): [string, any][] {
+  const result: [string, any][] = [];
+  for (const key in obj) {
+    result.push([key, obj[key]]);
   }
-
-  return total;
+  return result;
 }
 
-console.log(calculateSumOfNumbers([1, "10", { son: 10 }, true, 60, 29]));
+console.log(objectToArray({ name: "Alex", age: 22, c: 30 }));
+
+
+
+
+// task O
+// function calculateSumOfNumbers(arr: any[]): number {
+//   let total = 0;
+
+//   for (const item of arr) {
+//     if (typeof item === "number") {
+//       total += item;
+//     }
+//   }
+
+//   return total;
+// }
+
+// console.log(calculateSumOfNumbers([1, "10", { son: 10 }, true, 60, 29]));
 
 
 

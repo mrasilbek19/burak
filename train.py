@@ -1,15 +1,26 @@
+# task P
+def objectToArray(obj):
+    result = []
+    for key in obj:
+        result.append([key, obj[key]])
+    return result
+
+
+print(objectToArray({"Name": "Alex", "age": 22, "d": 234, "group": "A2"}))
+
+
 # task O
-def calculateSumOfNumbers(arr):
-    total = 0
+# def calculateSumOfNumbers(arr):
+#     total = 0
 
-    for item in arr:
-        if type(item) == int or type(item) == float:
-            total += item
+#     for item in arr:
+#         if type(item) == int or type(item) == float:
+#             total += item
 
-    return total
+#     return total
 
 
-print(calculateSumOfNumbers([True, 25, 4.6, 28]))
+# print(calculateSumOfNumbers([True, 25, 4.6, 28]))
 
 
 # Task N
