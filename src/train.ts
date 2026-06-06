@@ -8,16 +8,38 @@
    - Error handling
  */
 
-//TASK P
-function objectToArray(obj: Record<string, any>): [string, any][] {
-  const result: [string, any][] = [];
+// TASK Q
+function hasProperty(obj: Record<string, any>, objKey: string): boolean {
   for (const key in obj) {
-    result.push([key, obj[key]]);
+    if (key === objKey) {
+      console.log(`object has -> ${objKey} <- property`);
+      return true;
+    }
   }
-  return result;
+  console.log(`object does not have -> ${objKey} <- property`);
+  return false;
 }
 
-console.log(objectToArray({ name: "Alex", age: 22, c: 30 }));
+const car = {
+  name: "BMW",
+  year: 2004,
+};
+
+console.log(hasProperty(car, "name"));
+console.log(hasProperty(car, "origin"));
+console.log(hasProperty(car, "year"));
+
+
+//TASK P
+// function objectToArray(obj: Record<string, any>): [string, any][] {
+//   const result: [string, any][] = [];
+//   for (const key in obj) {
+//     result.push([key, obj[key]]);
+//   }
+//   return result;
+// }
+
+// console.log(objectToArray({ name: "Alex", age: 22, c: 30 }));
 
 
 

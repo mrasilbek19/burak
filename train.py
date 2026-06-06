@@ -1,12 +1,28 @@
-# task P
-def objectToArray(obj):
-    result = []
+# task Q
+def hasProperty(obj, objKey):
     for key in obj:
-        result.append([key, obj[key]])
-    return result
+        if key == objKey:
+            print(f"object has -> {objKey} <- property")
+            return True
+    print(f"object does not have -> {objKey} <- property")
+    return False
 
 
-print(objectToArray({"Name": "Alex", "age": 22, "d": 234, "group": "A2"}))
+car = {"name": "BMW", "year": 2004}
+
+print(hasProperty(car, "origin"))
+print(hasProperty(car, "name"))
+
+
+# task P
+# def objectToArray(obj):
+#     result = []
+#     for key in obj:
+#         result.append([key, obj[key]])
+#     return result
+
+
+# print(objectToArray({"Name": "Alex", "age": 22, "d": 234, "group": "A2"}))
 
 
 # task O
