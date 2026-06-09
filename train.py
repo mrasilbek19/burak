@@ -1,17 +1,33 @@
+# TASK R
+def calculate(expr):
+    a, operator, b = expr.split(" ")
+    if operator == "+":
+        return int(a) + int(b)
+    if operator == "-":
+        return int(a) - int(b)
+    if operator == "*":
+        return int(a) * int(b)
+    if operator == "/":
+        return int(a) / int(b)
+    raise ValueError("Invalid operator")
+
+
+print(calculate("1 + 3"))
+
 # task Q
-def hasProperty(obj, objKey):
-    for key in obj:
-        if key == objKey:
-            print(f"object has -> {objKey} <- property")
-            return True
-    print(f"object does not have -> {objKey} <- property")
-    return False
+# def hasProperty(obj, objKey):
+#     for key in obj:
+#         if key == objKey:
+#             print(f"object has -> {objKey} <- property")
+#             return True
+#     print(f"object does not have -> {objKey} <- property")
+#     return False
 
 
-car = {"name": "BMW", "year": 2004}
+# car = {"name": "BMW", "year": 2004}
 
-print(hasProperty(car, "origin"))
-print(hasProperty(car, "name"))
+# print(hasProperty(car, "origin"))
+# print(hasProperty(car, "name"))
 
 
 # task P

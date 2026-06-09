@@ -8,26 +8,42 @@
    - Error handling
  */
 
-// TASK Q
-function hasProperty(obj: Record<string, any>, objKey: string): boolean {
-  for (const key in obj) {
-    if (key === objKey) {
-      console.log(`object has -> ${objKey} <- property`);
-      return true;
-    }
-  }
-  console.log(`object does not have -> ${objKey} <- property`);
-  return false;
+// TASK R
+function calculate(expr: string): number {
+  const [a, operator, b] = expr.split(" ");
+  if (operator === "+") return Number(a) + Number(b);
+  if (operator === "-") return Number(a) - Number(b);
+  if (operator === "*") return Number(a) * Number(b);
+  if (operator === "/") return Number(a) / Number(b);
+  throw new Error("Invalid operator");
 }
 
-const car = {
-  name: "BMW",
-  year: 2004,
-};
+console.log(calculate("1 + 3"));
+console.log(calculate("5 * 2"));
+console.log(calculate("5 - 2"));
 
-console.log(hasProperty(car, "name"));
-console.log(hasProperty(car, "origin"));
-console.log(hasProperty(car, "year"));
+
+
+// TASK Q
+// function hasProperty(obj: Record<string, any>, objKey: string): boolean {
+//   for (const key in obj) {
+//     if (key === objKey) {
+//       console.log(`object has -> ${objKey} <- property`);
+//       return true;
+//     }
+//   }
+//   console.log(`object does not have -> ${objKey} <- property`);
+//   return false;
+// }
+
+// const car = {
+//   name: "BMW",
+//   year: 2004,
+// };
+
+// console.log(hasProperty(car, "name"));
+// console.log(hasProperty(car, "origin"));
+// console.log(hasProperty(car, "year"));
 
 
 //TASK P
