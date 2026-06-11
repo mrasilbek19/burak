@@ -1,18 +1,30 @@
+# TASK S
+
+def missingNumber(arr):
+    n = len(arr)
+    for i in range(n + 1):
+        if i not in arr:
+            return i
+
+
+arr1 = [3, 0, 1, 4]
+
+print(missingNumber(arr1))
+
+
 # TASK R
-def calculate(expr):
-    a, operator, b = expr.split(" ")
-    if operator == "+":
-        return int(a) + int(b)
-    if operator == "-":
-        return int(a) - int(b)
-    if operator == "*":
-        return int(a) * int(b)
-    if operator == "/":
-        return int(a) / int(b)
-    raise ValueError("Invalid operator")
+# def calculate(expr):
+#     a, operator, b = expr.split(" ")
+#     if operator == "+":
+#         return int(a) + int(b)
+#     if operator == "-":
+#         return int(a) - int(b)
+#     if operator == "*":
+#         return int(a) * int(b)
+#     if operator == "/":
+#         return int(a) / int(b)
+#     raise ValueError("Invalid operator")
 
-
-print(calculate("1 + 3"))
 
 # task Q
 # def hasProperty(obj, objKey):

@@ -8,19 +8,43 @@
    - Error handling
  */
 
-// TASK R
-function calculate(expr: string): number {
-  const [a, operator, b] = expr.split(" ");
-  if (operator === "+") return Number(a) + Number(b);
-  if (operator === "-") return Number(a) - Number(b);
-  if (operator === "*") return Number(a) * Number(b);
-  if (operator === "/") return Number(a) / Number(b);
-  throw new Error("Invalid operator");
+/* Cookies:
+request join
+self destroy */
+
+/* Validation:
+Frontend validation
+Backend validation
+DB validaation */
+
+// TASK S
+function missingNumber(arr: number[]): number {
+  const n = arr.length;
+  for (let i = 0; i <= n; i++) {
+    if (!arr.includes(i)) {
+      return i;
+    }
+  }
+  return -1;
 }
 
-console.log(calculate("1 + 3"));
-console.log(calculate("5 * 2"));
-console.log(calculate("5 - 2"));
+const arr1 = [3, 0, 1, 4, 2, 6, 7];
+
+console.log(missingNumber(arr1));
+
+// TASK R
+// function calculate(expr: string): number {
+//   const [a, operator, b] = expr.split(" ");
+//   if (operator === "+") return Number(a) + Number(b);
+//   if (operator === "-") return Number(a) - Number(b);
+//   if (operator === "*") return Number(a) * Number(b);
+//   if (operator === "/") return Number(a) / Number(b);
+//   throw new Error("Invalid operator");
+// }
+
+// console.log(calculate("1 + 3"));
+// console.log(calculate("5 * 2"));
+// console.log(calculate("5 - 2"));
 
 
 
