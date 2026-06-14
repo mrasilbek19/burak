@@ -17,20 +17,30 @@ Frontend validation
 Backend validation
 DB validaation */
 
-// TASK S
-function missingNumber(arr: number[]): number {
-  const n = arr.length;
-  for (let i = 0; i <= n; i++) {
-    if (!arr.includes(i)) {
-      return i;
-    }
-  }
-  return -1;
+
+// TASK T
+function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+  const added = arr1.concat(arr2);
+  return added.sort((a, b) => a - b);
 }
 
-const arr1 = [3, 0, 1, 4, 2, 6, 7];
+const result = mergeSortedArrays([3, 56, 7], [9, 8, 1])
+console.log(result);
 
-console.log(missingNumber(arr1));
+// TASK S
+// function missingNumber(arr: number[]): number {
+//   const n = arr.length;
+//   for (let i = 0; i <= n; i++) {
+//     if (!arr.includes(i)) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// const arr1 = [3, 0, 1, 4, 2, 6, 7];
+
+// console.log(missingNumber(arr1));
 
 // TASK R
 // function calculate(expr: string): number {

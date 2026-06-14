@@ -1,15 +1,23 @@
+# TASK T
+def mergeSortedArrays(arr1, arr2):
+    return sorted(arr1 + arr2)
+
+
+print(mergeSortedArrays([0, 3, 4], [4, 6, 7]))
+
+
 # TASK S
 
-def missingNumber(arr):
-    n = len(arr)
-    for i in range(n + 1):
-        if i not in arr:
-            return i
+# def missingNumber(arr):
+#     n = len(arr)
+#     for i in range(n + 1):
+#         if i not in arr:
+#             return i
 
 
-arr1 = [3, 0, 1, 4]
+# arr1 = [3, 0, 1, 4]
 
-print(missingNumber(arr1))
+# print(missingNumber(arr1))
 
 
 # TASK R
