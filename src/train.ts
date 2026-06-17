@@ -17,15 +17,22 @@ Frontend validation
 Backend validation
 DB validaation */
 
+/*
+  Traditional Frontend Development => SSR (Admin ) => EJS
+  Modern Frontend Development => SPA (User) => REACT
+*/
 
-// TASK T
-function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
-  const added = arr1.concat(arr2);
-  return added.sort((a, b) => a - b);
-}
 
-const result = mergeSortedArrays([3, 56, 7], [9, 8, 1])
-console.log(result);
+
+
+// // TASK T
+// function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+//   const added = arr1.concat(arr2);
+//   return added.sort((a, b) => a - b);
+// }
+
+// const result = mergeSortedArrays([3, 56, 7], [9, 8, 1])
+// console.log(result);
 
 // TASK S
 // function missingNumber(arr: number[]): number {
