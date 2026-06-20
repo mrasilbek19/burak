@@ -1,9 +1,26 @@
+# TASK V
+
+def countLetters(word):
+    result = {}
+
+    for letter in word:
+        if letter in result:
+            result[letter] += 1
+        else:
+            result[letter] = 1
+
+    return result
+
+
+print(countLetters("restaurantController"))
+
+
 # TASK T
-def mergeSortedArrays(arr1, arr2):
-    return sorted(arr1 + arr2)
+# def mergeSortedArrays(arr1, arr2):
+#     return sorted(arr1 + arr2)
 
 
-print(mergeSortedArrays([0, 3, 4], [4, 6, 7]))
+# print(mergeSortedArrays([0, 3, 4], [4, 6, 7]))
 
 
 # TASK S
