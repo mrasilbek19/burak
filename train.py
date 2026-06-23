@@ -1,18 +1,34 @@
-# TASK V
 
-def countLetters(word):
-    result = {}
+# TASK W
 
-    for letter in word:
-        if letter in result:
-            result[letter] += 1
-        else:
-            result[letter] = 1
+def devideArray(arr, size):
+    result = []
+
+    for i in range(0, len(arr), size):
+        result.append(arr[i:i + size])
 
     return result
 
 
-print(countLetters("restaurantController"))
+# Test
+print(devideArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 4))
+
+
+# TASK V
+
+# def countLetters(word):
+#     result = {}
+
+#     for letter in word:
+#         if letter in result:
+#             result[letter] += 1
+#         else:
+#             result[letter] = 1
+
+#     return result
+
+
+# print(countLetters("restaurantController"))
 
 
 # TASK T

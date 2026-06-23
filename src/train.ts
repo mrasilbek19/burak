@@ -23,23 +23,39 @@ DB validaation */
 */
 
 
-//TASK V
 
-function countLetters(word: string): Record<string, number> {
-  const result: Record<string, number> = {};
+// TASK W
 
-  for (const letter of word) {
-    if (letter in result) {
-      result[letter]++;
-    } else {
-      result[letter] = 1;
-    }
+function divideArray(arr: number[], size: number): number[][] {
+  const result: number[][] = [];
+
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
   }
-  console.log(result);
+
   return result;
 }
 
-countLetters("updateChosenUser")
+// Test
+console.log(divideArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 5));
+
+//TASK V
+
+// function countLetters(word: string): Record<string, number> {
+//   const result: Record<string, number> = {};
+
+//   for (const letter of word) {
+//     if (letter in result) {
+//       result[letter]++;
+//     } else {
+//       result[letter] = 1;
+//     }
+//   }
+//   console.log(result);
+//   return result;
+// }
+
+// countLetters("updateChosenUser")
 
 // // TASK T
 // function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
