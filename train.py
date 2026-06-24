@@ -1,17 +1,32 @@
+# TASK X
+
+def countOccurrences(obj, key):
+    count = 0
+
+    for k, v in obj.items():
+        if k == key:
+            count += 1
+
+        if isinstance(v, dict):
+            count += countOccurrences(v, key)
+
+    return count
+
+
+print(countOccurrences({"model": "A", "s": {"model": "B"}}, "model"))
+
 
 # TASK W
 
-def devideArray(arr, size):
-    result = []
+# def devideArray(arr, size):
+#     result = []
 
-    for i in range(0, len(arr), size):
-        result.append(arr[i:i + size])
+#     for i in range(0, len(arr), size):
+#         result.append(arr[i:i + size])
 
-    return result
+#     return result
 
-
-# Test
-print(devideArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 4))
+# print(devideArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 4))
 
 
 # TASK V

@@ -22,22 +22,41 @@ DB validaation */
   Modern Frontend Development => SPA (User) => REACT
 */
 
+// TASK X
+
+function countOccurrences(obj: any, key: string): number {
+  let count = 0;
+
+  for (const k in obj) {
+    if (k === key) {
+      count++;
+    }
+
+    if (typeof obj[k] === "object" && obj[k] !== null) {
+      count += countOccurrences(obj[k], key);
+    }
+  }
+
+  return count;
+}
+
+const data = { model: "A", s: { model: "B" }, d: { model: "F" }, };
+
+console.log(countOccurrences(data, "model"));
 
 
 // TASK W
 
-function divideArray(arr: number[], size: number): number[][] {
-  const result: number[][] = [];
+// function divideArray(arr: number[], size: number): number[][] {
+//   const result: number[][] = [];
 
-  for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
-  }
+//   for (let i = 0; i < arr.length; i += size) {
+//     result.push(arr.slice(i, i + size));
+//   }
 
-  return result;
-}
-
-// Test
-console.log(divideArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 5));
+//   return result;
+// }
+// console.log(divideArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 5));
 
 //TASK V
 
