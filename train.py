@@ -1,19 +1,33 @@
+# TASK Y
+def findIntersection(arr1, arr2):
+    result = []
+
+    for num in arr1:
+        if num in arr2:
+            result.append(num)
+
+    return result
+
+
+print(findIntersection([1, 2, 3, 8], [3, 2, 0, 8]))
+
+
 # TASK X
 
-def countOccurrences(obj, key):
-    count = 0
+# def countOccurrences(obj, key):
+#     count = 0
 
-    for k, v in obj.items():
-        if k == key:
-            count += 1
+#     for k, v in obj.items():
+#         if k == key:
+#             count += 1
 
-        if isinstance(v, dict):
-            count += countOccurrences(v, key)
+#         if isinstance(v, dict):
+#             count += countOccurrences(v, key)
 
-    return count
+#     return count
 
 
-print(countOccurrences({"model": "A", "s": {"model": "B"}}, "model"))
+# print(countOccurrences({"model": "A", "s": {"model": "B"}}, "model"))
 
 
 # TASK W

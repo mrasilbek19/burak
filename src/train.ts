@@ -22,27 +22,44 @@ DB validaation */
   Modern Frontend Development => SPA (User) => REACT
 */
 
-// TASK X
+// TASK Y
 
-function countOccurrences(obj: any, key: string): number {
-  let count = 0;
+function findIntersection(arr1: number[], arr2: number[]): number[] {
+  const result = [];
 
-  for (const k in obj) {
-    if (k === key) {
-      count++;
-    }
-
-    if (typeof obj[k] === "object" && obj[k] !== null) {
-      count += countOccurrences(obj[k], key);
+  for (const num of arr1) {
+    if (arr2.includes(num)) {
+      result.push(num);
     }
   }
 
-  return count;
+  return result;
 }
 
-const data = { model: "A", s: { model: "B" }, d: { model: "F" }, };
+console.log(findIntersection([1, 2, 3, 1, 5, 6], [2, 4, 8, 6, 5]));
 
-console.log(countOccurrences(data, "model"));
+
+// TASK X
+
+// function countOccurrences(obj: any, key: string): number {
+//   let count = 0;
+
+//   for (const k in obj) {
+//     if (k === key) {
+//       count++;
+//     }
+
+//     if (typeof obj[k] === "object" && obj[k] !== null) {
+//       count += countOccurrences(obj[k], key);
+//     }
+//   }
+
+//   return count;
+// }
+
+// const data = { model: "A", s: { model: "B" }, d: { model: "F" }, };
+
+// console.log(countOccurrences(data, "model"));
 
 
 // TASK W
