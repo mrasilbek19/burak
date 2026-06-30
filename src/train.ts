@@ -22,21 +22,37 @@ DB validaation */
   Modern Frontend Development => SPA (User) => REACT
 */
 
-// TASK Y
+//TASK Z
 
-function findIntersection(arr1: number[], arr2: number[]): number[] {
-  const result = [];
+function sumEvens(arr: number[]): number {
+  let sum = 0;
 
-  for (const num of arr1) {
-    if (arr2.includes(num)) {
-      result.push(num);
+  for (const num of arr) {
+    if (num % 2 === 0) {
+      sum += num;
     }
   }
 
-  return result;
+  return sum;
 }
 
-console.log(findIntersection([1, 2, 3, 1, 5, 6], [2, 4, 8, 6, 5]));
+console.log(sumEvens([2, 5, 6, 8, 9]));
+
+// TASK Y
+
+// function findIntersection(arr1: number[], arr2: number[]): number[] {
+//   const result = [];
+
+//   for (const num of arr1) {
+//     if (arr2.includes(num)) {
+//       result.push(num);
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(findIntersection([1, 2, 3, 1, 5, 6], [2, 4, 8, 6, 5]));
 
 
 // TASK X
