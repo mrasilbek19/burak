@@ -117,8 +117,8 @@ memberController.getTopUsers = async (req: Request, res: Response) => {
 memberController.verifyAuth = async (req: ExtendedRequest, res: Response, next: NextFunction) => {
     try {
         console.log("verifyAuth");
-        const token = req.cookies["accessToken"]
-        if (token) req.member = await authService.checkAuth(token)
+        const token = req.cookies["accessToken"];
+        if (token) req.member = await authService.checkAuth(token);
 
         if (!req.member)
             throw new Errors(HttpCode.UNAUTHORIZED, Message.NOT_AUTHENTICATED);
