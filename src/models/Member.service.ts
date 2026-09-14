@@ -135,6 +135,7 @@ class MemberService {
             throw new Errors(HttpCode.BAD_REQUEST, Message.CREATE_FAILED);
         }
     }
+
     public async processLogin(input: LoginInput): Promise<Member> {
         const member = await this.memberModel
             .findOne(
@@ -164,10 +165,10 @@ class MemberService {
         return result;
     }
 
-    public async updateChosenUser(input: MemberUpdateInput): Promise<Member[]> {
+    public async updateChosenUser(input: MemberUpdateInput): Promise<Member> {
         const memberId = shapeIntoMongooseObkectId(input._id)
         const result = await this.memberModel
-            .findByIdAndUpdate({ _id: input._id }, input, { new: true })
+            .findByIdAndUpdate(memberId, input, { new: true })
             .exec();
         if (!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.UPDATE_FAILED);
 

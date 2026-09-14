@@ -38,6 +38,36 @@ $(function () {
             alert("Product update failed!");
         }
     });
+
+    $(".product-price-edit").on("change", async function () {
+        const id = $(this).data("id");
+        const productPrice = Number($(this).val());
+
+        console.log("========== PRICE UPDATE ==========");
+        console.log("ID:", id);
+        console.log("PRICE:", productPrice);
+        console.log("URL:", `/admin/product/${id}`);
+
+        try {
+            const response = await axios.post(`/admin/product/${id}`, {
+                productPrice: productPrice,
+            });
+
+            console.log("response:", response);
+
+            const result = response.data;
+
+            if (result.data) {
+                console.log("Product price updated!");
+                $(this).blur();
+            } else {
+                alert("Product price update failed!");
+            }
+        } catch (err) {
+            console.log("ERROR:", err);
+            alert("Product price update failed!");
+        }
+    });
 });
 
 function validateForm() {

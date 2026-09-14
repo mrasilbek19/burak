@@ -55,7 +55,8 @@
                     <%= value.productCollection==='DRINK' ? value.productVolume: value.productSize %>
                   </td>
                   <td>
-                    <%= value.productPrice%>
+                    <input type="number" class="product-price" value="<%= value.productPrice %>"
+                      id="<%= value._id %>" />
                   </td>
                   <td>
                     <%= value.productLeftCount%>
